@@ -1,0 +1,46 @@
+#!/bin/bash
+mkdir -p secret
+python3 generate.py distinct 100 0 10000 > ./secret/few-small-distinct.in
+python3 ../submissions/accepted/sol.py < ./secret/few-small-distinct.in > ./secret/few-small-distinct.ans
+
+python3 generate.py non-distinct 100 0 10000 > ./secret/few-small-nondistinct.in
+python3 ../submissions/accepted/sol.py < ./secret/few-small-nondistinct.in > ./secret/few-small-nondistinct.ans
+
+python3 generate.py any 100 0 10000 > ./secret/few-small-any.in
+python3 ../submissions/accepted/sol.py < ./secret/few-small-any.in > ./secret/few-small-any.ans
+
+python3 generate.py distinct 100 10001 100000000 > ./secret/few-large-distinct.in
+python3 ../submissions/accepted/sol.py < ./secret/few-large-distinct.in > ./secret/few-large-distinct.ans
+
+python3 generate.py non-distinct 100 10001 100000000 > ./secret/few-large-nondistinct.in
+python3 ../submissions/accepted/sol.py < ./secret/few-large-nondistinct.in > ./secret/few-large-nondistinct.ans
+
+python3 generate.py any 100 10001 100000000 > ./secret/few-large-any.in
+python3 ../submissions/accepted/sol.py < ./secret/few-large-any.in > ./secret/few-large-any.ans
+
+python3 generate.py distinct 100000 0 10000 > ./secret/many-small-distinct.in
+python3 ../submissions/accepted/sol.py < ./secret/many-small-distinct.in > ./secret/many-small-distinct.ans
+
+python3 generate.py non-distinct 100000 0 10000 > ./secret/many-small-nondistinct.in
+python3 ../submissions/accepted/sol.py < ./secret/many-small-nondistinct.in > ./secret/many-small-nondistinct.ans
+
+python3 generate.py any 100000 0 10000 > ./secret/many-small-any.in
+python3 ../submissions/accepted/sol.py < ./secret/many-small-any.in > ./secret/many-small-any.ans
+
+python3 generate.py distinct 100000 0 100000000 > ./secret/many-large-distinct.in
+python3 ../submissions/accepted/sol.py < ./secret/many-large-distinct.in > ./secret/many-large-distinct.ans
+
+python3 generate.py non-distinct 100000 10001 100000000 > ./secret/many-large-nondistinct.in
+python3 ../submissions/accepted/sol.py < ./secret/many-large-nondistinct.in > ./secret/many-large-nondistinct.ans
+
+python3 generate.py any 100000 0 10000 > ./secret/many-large-any.in
+python3 ../submissions/accepted/sol.py < ./secret/many-large-any.in > ./secret/many-large-any.ans
+
+python3 generate.py any 100000 0 100000000 > ./secret/random.in
+python3 ../submissions/accepted/sol.py < ./secret/random.in > ./secret/random.ans
+
+python3 generate.py any 1 0 0 > ./secret/edge1.in
+python3 ../submissions/accepted/sol.py < ./secret/edge1.in > ./secret/edge1.ans
+
+python3 generate.py any 1 100000000 100000000 > ./secret/edge2.in
+python3 ../submissions/accepted/sol.py < ./secret/edge2.in > ./secret/edge2.ans

@@ -1,0 +1,33 @@
+\problemname{Spies Like Us}
+
+The Ultrasecret Spy Organization is very concerned about recent leads
+concerning a secret conspiracy involving the use of the Comic Sans font.
+
+In order to avoid groupthink, the Ultrasecret Spy Organization has decided to
+divide its agents in two groups. Each of the two groups will carry its own
+investigation. However, occasionally interaction between members of different
+groups will happen through some previously designated contact points (i.e., two
+people on different teams that are allowed to speak with each other in special
+circumstances). This has to be made in a way that preserves the fact that there
+is not much communication between the teams. To make this rule more exact, two
+people on the same team can have no more than one common contact on the other
+team.
+
+You are given a plan for the contact points between the two groups. Your task
+is to determine whether this actually satisfies the constraint that two people
+on the same team can have no more than one common contact in the other team.
+
+\section*{Input}
+
+The first line of the input file will contain two space-separated integers $N$
+and $M$ ($1 \leq N, M \leq 5\,000$). They represent the number of people in each of the
+teams. The next line will contain an integer $K$ ($0 \leq K \leq NM$). Each of the
+following $K$ lines will contain two integers, $i$ and $j$, with ($1 \leq i \leq N$, $1 \leq j \leq M$).
+This input will represent that person $i$ of the first team and person $j$ of the
+second team are allowed to communicate with each other.
+
+\section*{Output}
+
+For each input, you will output one line. Its content will be YES, if the
+proposal satifies the constraint that two people on the same team can have no
+more than one common contact on the other team, and NO otherwise.

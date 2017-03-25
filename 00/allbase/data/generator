@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir -p secret
+for i in `seq 1 15`;
+do
+    python3 generate.py 2 100000 > ./secret/small-$i.in
+    ../submissions/accepted/a.out < ./secret/small-$i.in > ./secret/small-$i.ans
+    python3 generate.py 100001 100000000 > ./secret/medium-$i.in
+    ../submissions/accepted/a.out < ./secret/medium-$i.in > ./secret/medium-$i.ans
+    python3 generate.py 100000001 1000000000000 > ./secret/large-$i.in
+    ../submissions/accepted/a.out < ./secret/large-$i.in > ./secret/large-$i.ans
+done;
+echo "Done!"
