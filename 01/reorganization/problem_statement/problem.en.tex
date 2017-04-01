@@ -1,0 +1,22 @@
+\problemname{Reorganization}
+
+Alice and Bob own a huge company. This company was losing money consistently over the last 30 years, since its owners spent too much time playing games with mathematicians. Alice and Bob decide to make a change.
+
+Alice and Bob start by giving unique employee IDs to each of the n employees, consecutive positive integers starting from 1.
+
+Then, Alice and Bob give unique ranks to each employee. Each rank is a positive integer. After this, they plan to reorganize the company, by making sure that the employees satisfy the following conditions:
+
+\begin{enumerate}
+    \item There is exactly one director, who has no supervisor;
+    \item Except for the director, each employee has a supervisor, and this supervisor has a smaller employee ID and a higher rank (the value of rank is smaller); and
+    \item Each employee can supervise at most 2 people.
+\end{enumerate}
+
+Alice and Bob are eager to know whether their company can be reorganized successfully.
+
+\section*{Input}
+The first line contains $n$ ($1 \leq n \leq 100\,000$), indicating the number of employees. On the next $n$ lines are $n$ distinct integers $R_i$ ($1 \leq R_i \leq 10^7$), one integer per line, each indicating the rank of an employee. Employees are given in increasing order of employee ID.
+
+\section*{Output}
+Output \texttt{YES} if the company can be reorganized successfully; output \texttt{NO} otherwise.
+
